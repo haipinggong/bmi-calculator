@@ -1,5 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { styles } from "./Hero.styles";
+import logo from "../../assets/images/logo.svg";
+import { Header } from "./Header/Header";
+import { Form } from "./Form/Form";
 
 interface HeroProps {
   title: string;
@@ -9,12 +12,14 @@ interface HeroProps {
 export const Hero = ({ title, description }: HeroProps) => {
   return (
     <Box component="section" sx={styles.heroContainer}>
-      <Typography variant="h1" sx={styles.title}>
-        {title}
-      </Typography>
-      <Typography variant="body1" sx={styles.description}>
-        {description}
-      </Typography>
+      <Box
+        component="img"
+        src={logo}
+        alt="BMI Calculator Logo"
+        sx={styles.logo}
+      />
+      <Header title={title} description={description} />
+      <Form />
     </Box>
   );
 };

@@ -9,17 +9,9 @@ export const styles: Record<string, SxProps> = {
     textAlign: "center",
     bgcolor: "background.paper",
   },
-  title: {
-    color: "text.primary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "2.25rem",
-    marginBottom: "1rem",
-  },
-  description: {
-    color: "text.secondary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "1.125rem",
-    maxWidth: "600px",
-    margin: "0 auto",
+  logo: {
+    width: "64px",
+    height: "64px",
+    marginBottom: "2rem",
   },
 };
