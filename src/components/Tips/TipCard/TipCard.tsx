@@ -15,9 +15,7 @@ export const TipCard = ({ icon, title, description }: TipCardProps) => {
         <Typography variant="h4" component="h3">
           {title}
         </Typography>
-        <Typography variant="body1" sx={styles.description}>
-          {description}
-        </Typography>
+        <Typography color="text.secondary">{description}</Typography>
       </Box>
     </Card>
   );

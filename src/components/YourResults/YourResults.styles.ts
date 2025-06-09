@@ -18,7 +18,4 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 4,
     paddingInline: 3,
   },
-  resultDescription: (theme) => ({
-    color: theme.palette.text.secondary,
-  }),
 };

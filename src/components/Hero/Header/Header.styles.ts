@@ -9,8 +9,7 @@ export const styles: Record<string, SxProps<Theme>> = {
   title: {
     textAlign: "center",
   },
-  description: (theme) => ({
+  description: {
     textAlign: "center",
-    color: theme.palette.text.secondary,
-  }),
+  },
 };

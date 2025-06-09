@@ -7,8 +7,11 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 7,
     padding: (theme) => theme.spacing(8, 3),
   },
+  title: {
+    textAlign: "center",
+  },
   description: {
-    color: (theme) => theme.palette.text.secondary,
+    textAlign: "center",
   },
   limitsContainer: {
     display: "flex",

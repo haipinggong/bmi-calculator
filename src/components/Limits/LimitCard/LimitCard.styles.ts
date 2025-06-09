@@ -18,11 +18,4 @@ export const styles: Record<string, SxProps<Theme>> = {
     width: "32px",
     height: "32px",
   },
-  description: {
-    color: "#5E6E85",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "16px",
-    fontWeight: 400,
-    lineHeight: "150%",
-  },
 };

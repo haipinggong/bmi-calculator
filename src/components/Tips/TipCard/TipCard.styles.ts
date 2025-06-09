@@ -16,7 +16,4 @@ export const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     gap: 3,
   },
-  description: {
-    color: (theme) => theme.palette.text.secondary,
-  },
 };

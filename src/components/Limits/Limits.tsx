@@ -10,10 +10,10 @@ import { LimitCard } from "./LimitCard/LimitCard";
 export const Limits = () => {
   return (
     <Box sx={styles.container}>
-      <Typography variant="h3" component="h2">
+      <Typography variant="h3" component="h2" sx={styles.title}>
         Limitations of BMI
       </Typography>
-      <Typography variant="body1" sx={styles.description}>
+      <Typography color="text.secondary" sx={styles.description}>
         Although BMI is often a practical indicator of healthy weight, it is not
         suited for every person. Specific groups should carefully consider their
         BMI outcomes, and in certain cases, the measurement may not be

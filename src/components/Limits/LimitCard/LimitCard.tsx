@@ -21,9 +21,7 @@ export const LimitCard = ({ icon, title, description }: LimitCardProps) => {
           {title}
         </Typography>
       </Box>
-      <Typography variant="body1" color="text.secondary">
-        {description}
-      </Typography>
+      <Typography color="text.secondary">{description}</Typography>
     </Card>
   );
 };
