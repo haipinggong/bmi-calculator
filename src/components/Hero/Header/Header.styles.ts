@@ -1,25 +1,16 @@
-import type { SxProps } from "@mui/material";
+import type { SxProps, Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps> = {
-  container: {
+export const styles: Record<string, SxProps<Theme>> = {
+  headerContainer: {
     display: "flex",
     flexDirection: "column",
     gap: 3,
-    marginBottom: 4,
   },
   title: {
-    color: "#253347",
-    fontFamily: "Inter",
-    fontSize: "48px",
-    fontWeight: 600,
-    lineHeight: "110%",
-    letterSpacing: "-2.4px",
+    textAlign: "center",
   },
-  description: {
-    color: "#5E6E85",
-    fontFamily: "Inter",
-    fontSize: "16px",
-    fontWeight: 400,
-    lineHeight: "150%",
-  },
+  description: (theme) => ({
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }),
 };

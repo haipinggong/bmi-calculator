@@ -1,10 +1,10 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { styles } from "./Header.styles";
 
 export const Header = () => {
   return (
-    <>
-      <Typography variant="h1" sx={styles.title}>
+    <Box sx={styles.headerContainer}>
+      <Typography variant="h2" component="h1" sx={styles.title}>
         Body Mass Index Calculator
       </Typography>
       <Typography variant="body1" sx={styles.description}>
@@ -13,6 +13,6 @@ export const Header = () => {
         healthy weight, it offers a valuable starting point to evaluate your
         overall health and well-being.
       </Typography>
-    </>
+    </Box>
   );
 };
