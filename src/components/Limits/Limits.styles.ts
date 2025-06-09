@@ -1,60 +1,55 @@
 export const styles = {
   container: {
-    maxWidth: "1160px",
-    margin: "0 auto",
-    padding: "0 3",
+    display: "flex",
+    flexDirection: "column",
+    gap: "3rem",
+    padding: "0 1rem",
   },
   title: {
     color: "#253347",
-    fontFamily: "Inter",
+    fontFamily: "Inter, sans-serif",
     fontSize: "48px",
     fontWeight: 600,
     lineHeight: "110%",
-    letterSpacing: "-2.4px",
-    marginBottom: 4,
+    letterSpacing: "-2.5%",
   },
-  description: {
-    color: "#5E6E85",
-    fontFamily: "Inter",
-    fontSize: "16px",
-    fontWeight: 400,
-    lineHeight: "150%",
-    maxWidth: "564px",
-    marginBottom: 7,
+  content: {
+    display: "flex",
+    gap: "2rem",
   },
-  cardsContainer: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: 3,
-  },
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: 2,
-    padding: 4,
+  limitsContainer: {
     display: "flex",
     flexDirection: "column",
-    gap: 3,
+    gap: "2rem",
   },
-  cardHeader: {
+  limitCard: {
     display: "flex",
-    alignItems: "center",
-    gap: 2,
+    gap: "1.5rem",
+    padding: "2rem",
+    backgroundColor: "#FFFFFF",
+    borderRadius: "16px",
+    boxShadow: "0px 16px 30px 0px rgba(143, 174, 207, 0.25)",
   },
-  icon: {
+  limitIcon: {
     width: "32px",
     height: "32px",
   },
-  cardTitle: {
+  limitContent: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+  },
+  limitTitle: {
     color: "#253347",
-    fontFamily: "Inter",
+    fontFamily: "Inter, sans-serif",
     fontSize: "24px",
     fontWeight: 600,
     lineHeight: "110%",
     letterSpacing: "-1.2px",
   },
-  cardDescription: {
+  limitDescription: {
     color: "#5E6E85",
-    fontFamily: "Inter",
+    fontFamily: "Inter, sans-serif",
     fontSize: "16px",
     fontWeight: 400,
     lineHeight: "150%",

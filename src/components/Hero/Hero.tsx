@@ -4,12 +4,7 @@ import logo from "../../assets/images/logo.svg";
 import { Header } from "./Header/Header";
 import { Form } from "./Form/Form";
 
-interface HeroProps {
-  title: string;
-  description: string;
-}
-
-export const Hero = ({ title, description }: HeroProps) => {
+export const Hero = () => {
   return (
     <Box component="section" sx={styles.heroContainer}>
       <Box
@@ -18,7 +13,7 @@ export const Hero = ({ title, description }: HeroProps) => {
         alt="BMI Calculator Logo"
         sx={styles.logo}
       />
-      <Header title={title} description={description} />
+      <Header />
       <Form />
     </Box>
   );
