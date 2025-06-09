@@ -1,67 +1,11 @@
-export const styles = {
+import type { SxProps, Theme } from "@mui/material";
+
+export const styles: Record<string, SxProps<Theme>> = {
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "3rem",
-    padding: "0 1rem",
-  },
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: 2,
-    padding: 4,
-    display: "flex",
-    flexDirection: "column",
-    gap: 3,
-  },
-  icon: {
-    width: "64px",
-    height: "64px",
-  },
-  title: {
-    color: "#253347",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "48px",
-    fontWeight: 600,
-    lineHeight: "110%",
-    letterSpacing: "-2.5%",
-  },
-  description: {
-    color: "#5E6E85",
-    fontFamily: "Inter",
-    fontSize: "16px",
-    fontWeight: 400,
-    lineHeight: "150%",
-  },
-  tipsContainer: {
-    display: "flex",
-    gap: "2rem",
-  },
-  tipCard: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "1.5rem",
-    padding: "2rem",
-    backgroundColor: "#FFFFFF",
-    borderRadius: "16px",
-    boxShadow: "0px 16px 30px 0px rgba(143, 174, 207, 0.25)",
-  },
-  tipIcon: {
-    width: "64px",
-    height: "64px",
-  },
-  tipTitle: {
-    color: "#253347",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "24px",
-    fontWeight: 600,
-    lineHeight: "110%",
-    letterSpacing: "-1.2px",
-  },
-  tipDescription: {
-    color: "#5E6E85",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "16px",
-    fontWeight: 400,
-    lineHeight: "150%",
+    justifyContent: "space-between",
+    gap: 5,
+    padding: (theme) => theme.spacing(6, 3),
   },
 };
