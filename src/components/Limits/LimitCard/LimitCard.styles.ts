@@ -8,6 +8,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     padding: 3,
     backgroundColor: (theme) => theme.palette.background.paper,
     borderRadius: 4,
+    boxShadow: "16px 32px 56px rgba(143, 174, 207, 0.25)",
   },
   iconContainer: {
     display: "flex",
