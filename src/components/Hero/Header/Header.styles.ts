@@ -1,17 +1,25 @@
 import type { SxProps } from "@mui/material";
 
 export const styles: Record<string, SxProps> = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 3,
+    marginBottom: 4,
+  },
   title: {
-    color: "text.primary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "2.25rem",
-    marginBottom: "1rem",
+    color: "#253347",
+    fontFamily: "Inter",
+    fontSize: "48px",
+    fontWeight: 600,
+    lineHeight: "110%",
+    letterSpacing: "-2.4px",
   },
   description: {
-    color: "text.secondary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "1.125rem",
-    maxWidth: "600px",
-    margin: "0 auto",
+    color: "#5E6E85",
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontWeight: 400,
+    lineHeight: "150%",
   },
 };

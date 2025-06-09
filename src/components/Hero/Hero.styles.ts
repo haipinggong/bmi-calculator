@@ -2,16 +2,13 @@ import type { SxProps } from "@mui/material";
 
 export const styles: Record<string, SxProps> = {
   heroContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: "2rem",
-    textAlign: "center",
-    bgcolor: "background.paper",
+    maxWidth: "1160px",
+    margin: "0 auto",
+    padding: "4 3 0",
   },
   logo: {
-    width: "64px",
-    height: "64px",
-    marginBottom: "2rem",
+    width: "36.7px",
+    height: "36.7px",
+    marginBottom: 4,
   },
 };

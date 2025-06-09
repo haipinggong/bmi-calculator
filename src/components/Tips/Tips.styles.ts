@@ -2,18 +2,18 @@ export const styles = {
   container: {
     maxWidth: "1160px",
     margin: "0 auto",
-    padding: "0 16px",
+    padding: "0 3",
     display: "flex",
     flexDirection: "column",
-    gap: "24px",
+    gap: 3,
   },
   card: {
     backgroundColor: "#fff",
-    borderRadius: "16px",
-    padding: "32px",
+    borderRadius: 2,
+    padding: 4,
     display: "flex",
     flexDirection: "column",
-    gap: "24px",
+    gap: 3,
   },
   icon: {
     width: "64px",

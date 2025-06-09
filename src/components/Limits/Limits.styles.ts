@@ -2,7 +2,7 @@ export const styles = {
   container: {
     maxWidth: "1160px",
     margin: "0 auto",
-    padding: "0 16px",
+    padding: "0 3",
   },
   title: {
     color: "#253347",
@@ -11,7 +11,7 @@ export const styles = {
     fontWeight: 600,
     lineHeight: "110%",
     letterSpacing: "-2.4px",
-    marginBottom: "32px",
+    marginBottom: 4,
   },
   description: {
     color: "#5E6E85",
@@ -20,25 +20,25 @@ export const styles = {
     fontWeight: 400,
     lineHeight: "150%",
     maxWidth: "564px",
-    marginBottom: "56px",
+    marginBottom: 7,
   },
   cardsContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: "24px",
+    gap: 3,
   },
   card: {
     backgroundColor: "#fff",
-    borderRadius: "16px",
-    padding: "32px",
+    borderRadius: 2,
+    padding: 4,
     display: "flex",
     flexDirection: "column",
-    gap: "24px",
+    gap: 3,
   },
   cardHeader: {
     display: "flex",
     alignItems: "center",
-    gap: "16px",
+    gap: 2,
   },
   icon: {
     width: "32px",

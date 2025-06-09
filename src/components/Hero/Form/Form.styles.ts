@@ -1,78 +1,67 @@
 import type { SxProps } from "@mui/material";
 
 export const styles: Record<string, SxProps> = {
-  formContainer: {
+  container: {
     display: "flex",
     flexDirection: "column",
-    gap: "1.5rem",
-    width: "100%",
-    maxWidth: "600px",
-    margin: "0 auto",
+    gap: 3,
   },
   header: {
-    color: "text.primary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "1.5rem",
+    color: "#253347",
+    fontFamily: "Inter",
+    fontSize: "24px",
     fontWeight: 600,
-    marginBottom: "1rem",
+    lineHeight: "110%",
+    letterSpacing: "-1.2px",
+    marginBottom: 3,
   },
   radioGroup: {
     display: "flex",
-    gap: "1rem",
-    marginBottom: "1rem",
+    gap: 2,
+    marginBottom: 3,
   },
   radioLabel: {
-    color: "text.primary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "1rem",
+    color: "#253347",
+    fontFamily: "Inter",
+    fontSize: "16px",
     fontWeight: 600,
   },
-  inputGroup: {
+  inputContainer: {
     display: "flex",
     flexDirection: "column",
-    gap: "0.5rem",
-  },
-  label: {
-    color: "text.primary",
-    fontFamily: "Inter, sans-serif",
-    fontSize: "0.875rem",
-    fontWeight: 600,
+    gap: 2,
   },
   input: {
-    "& .MuiOutlinedInput-root": {
-      borderRadius: "12px",
-      backgroundColor: "background.paper",
-      "& fieldset": {
-        borderColor: "primary.main",
-      },
-      "&:hover fieldset": {
-        borderColor: "primary.main",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "primary.main",
-      },
+    width: "100%",
+    padding: 2,
+    borderRadius: 1,
+    border: "1px solid #E8E8E8",
+    "&:focus": {
+      outline: "none",
+      borderColor: "#345FF6",
     },
   },
-  button: {
-    borderRadius: "12px",
-    padding: "1rem",
-    textTransform: "none",
-    fontSize: "1rem",
-    fontWeight: 600,
-  },
   resultSection: {
-    backgroundColor: "primary.main",
-    borderRadius: "16px",
-    padding: "2rem",
-    color: "white",
+    backgroundColor: "#345FF6",
+    borderRadius: 2,
+    padding: 3,
+    marginTop: 3,
   },
   resultTitle: {
-    fontSize: "1.5rem",
+    color: "#fff",
+    fontFamily: "Inter",
+    fontSize: "24px",
     fontWeight: 600,
-    marginBottom: "1rem",
+    lineHeight: "110%",
+    letterSpacing: "-1.2px",
+    marginBottom: 2,
   },
   resultDescription: {
-    fontSize: "0.875rem",
+    color: "#fff",
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontWeight: 400,
+    lineHeight: "150%",
     opacity: 0.8,
   },
 };
