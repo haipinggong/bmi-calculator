@@ -1,0 +1,62 @@
+export const styles = {
+  container: {
+    maxWidth: "1160px",
+    margin: "0 auto",
+    padding: "0 16px",
+  },
+  title: {
+    color: "#253347",
+    fontFamily: "Inter",
+    fontSize: "48px",
+    fontWeight: 600,
+    lineHeight: "110%",
+    letterSpacing: "-2.4px",
+    marginBottom: "32px",
+  },
+  description: {
+    color: "#5E6E85",
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontWeight: 400,
+    lineHeight: "150%",
+    maxWidth: "564px",
+    marginBottom: "56px",
+  },
+  cardsContainer: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "24px",
+  },
+  card: {
+    backgroundColor: "#fff",
+    borderRadius: "16px",
+    padding: "32px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px",
+  },
+  cardHeader: {
+    display: "flex",
+    alignItems: "center",
+    gap: "16px",
+  },
+  icon: {
+    width: "32px",
+    height: "32px",
+  },
+  cardTitle: {
+    color: "#253347",
+    fontFamily: "Inter",
+    fontSize: "24px",
+    fontWeight: 600,
+    lineHeight: "110%",
+    letterSpacing: "-1.2px",
+  },
+  cardDescription: {
+    color: "#5E6E85",
+    fontFamily: "Inter",
+    fontSize: "16px",
+    fontWeight: 400,
+    lineHeight: "150%",
+  },
+};
