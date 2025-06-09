@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import App from "./App.tsx";
-import { theme } from "./theme";
+import theme from "./theme";
 
 // Import Inter font
 import "@fontsource/inter/400.css"; // Regular
