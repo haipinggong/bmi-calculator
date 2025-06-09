@@ -4,7 +4,7 @@ import manEating from "../../assets/images/image-man-eating.webp";
 
 export const YourResults = () => {
   return (
-    <Box sx={styles.container}>
+    <Box component="section" sx={styles.container}>
       <Box
         component="img"
         src={manEating}
@@ -12,10 +12,10 @@ export const YourResults = () => {
         sx={styles.image}
       />
       <Box sx={styles.resultContainer}>
-        <Typography variant="h2" sx={styles.resultTitle}>
+        <Typography variant="h3" component="h2">
           What your BMI result means
         </Typography>
-        <Typography sx={styles.resultDescription}>
+        <Typography variant="body1" sx={styles.resultDescription}>
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
           Maintaining a healthy weight may lower your chances of experiencing
           health issues later on, such as obesity and type 2 diabetes. Aim for a
