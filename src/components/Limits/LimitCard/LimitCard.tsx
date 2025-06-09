@@ -9,14 +9,21 @@ type LimitCardProps = {
 
 export const LimitCard = ({ icon, title, description }: LimitCardProps) => {
   return (
-    <Card sx={styles.card}>
-      <Box component="img" src={icon} alt={`${title} icon`} sx={styles.icon} />
-      <Box sx={styles.content}>
-        <Typography variant="h3" sx={styles.title}>
+    <Card variant="outlined" sx={styles.card}>
+      <Box sx={styles.iconContainer}>
+        <Box
+          component="img"
+          src={icon}
+          alt={`${title} icon`}
+          sx={styles.icon}
+        />
+        <Typography variant="h5" component="h3">
           {title}
         </Typography>
-        <Typography sx={styles.description}>{description}</Typography>
       </Box>
+      <Typography variant="body1" color="text.secondary">
+        {description}
+      </Typography>
     </Card>
   );
 };
