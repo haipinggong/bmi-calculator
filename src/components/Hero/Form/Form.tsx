@@ -1,6 +1,5 @@
 import {
   Box,
-  TextField,
   Typography,
   RadioGroup,
   FormControlLabel,
@@ -8,6 +7,8 @@ import {
 } from "@mui/material";
 import { styles } from "./Form.styles";
 import { useState } from "react";
+import { HeightInput } from "./HeightInput/HeightInput";
+import { WeightInput } from "./WeightInput/WeightInput";
 
 type Unit = "metric" | "imperial";
 
@@ -20,10 +21,9 @@ export const Form = () => {
 
   return (
     <Box component="form" sx={styles.formContainer}>
-      <Typography variant="h2" sx={styles.header}>
+      <Typography variant="h4" component="h2">
         Enter your details below
       </Typography>
-
       <RadioGroup
         row
         value={unit}
@@ -42,39 +42,8 @@ export const Form = () => {
         />
       </RadioGroup>
 
-      <Box sx={styles.inputGroup}>
-        <Typography component="label" sx={styles.label}>
-          Height
-        </Typography>
-        <TextField
-          fullWidth
-          placeholder="0"
-          type="number"
-          InputProps={{
-            endAdornment: (
-              <Typography>{unit === "metric" ? "cm" : "ft"}</Typography>
-            ),
-          }}
-          sx={styles.input}
-        />
-      </Box>
-
-      <Box sx={styles.inputGroup}>
-        <Typography component="label" sx={styles.label}>
-          Weight
-        </Typography>
-        <TextField
-          fullWidth
-          placeholder="0"
-          type="number"
-          InputProps={{
-            endAdornment: (
-              <Typography>{unit === "metric" ? "kg" : "st"}</Typography>
-            ),
-          }}
-          sx={styles.input}
-        />
-      </Box>
+      <HeightInput unit={unit} />
+      <WeightInput unit={unit} />
 
       <Box sx={styles.resultSection}>
         <Typography sx={styles.resultTitle}>Welcome!</Typography>
