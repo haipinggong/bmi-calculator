@@ -7,6 +7,9 @@ export const styles: Record<string, SxProps<Theme>> = {
     alignItems: "center",
     gap: 4,
     padding: theme.spacing(4, 3, 0, 3),
+    [theme.breakpoints.up("sm")]: {
+      paddingInline: theme.spacing(5),
+    },
   }),
   logo: {
     width: "36.7px",

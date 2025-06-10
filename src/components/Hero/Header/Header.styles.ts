@@ -1,11 +1,14 @@
 import type { SxProps, Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  headerContainer: {
+  headerContainer: (theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: 3,
-  },
+    [theme.breakpoints.up("sm")]: {
+      paddingInline: theme.spacing(5),
+    },
+  }),
   title: {
     textAlign: "center",
   },
