@@ -7,15 +7,24 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 7,
     padding: (theme) => theme.spacing(8, 3),
   },
+  titleContainer: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 4,
+  },
   title: {
     textAlign: "center",
   },
   description: {
     textAlign: "center",
   },
-  limitsContainer: {
+  limitsContainer: (theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: 2,
-  },
+    [theme.breakpoints.up("sm")]: {
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+    },
+  }),
 };
