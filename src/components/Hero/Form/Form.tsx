@@ -46,8 +46,10 @@ export const Form = () => {
       <WeightInput unit={unit} />
 
       <Box sx={styles.resultSection}>
-        <Typography sx={styles.resultTitle}>Welcome!</Typography>
-        <Typography sx={styles.resultDescription}>
+        <Typography variant="h4" component="h3" color="common.white">
+          Welcome!
+        </Typography>
+        <Typography variant="body2" color="common.white">
           Enter your height and weight and you'll see your BMI result here
         </Typography>
       </Box>

@@ -1,13 +1,18 @@
 import type { SxProps, Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  formContainer: {
+  formContainer: (theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: 3,
     padding: 3,
     borderRadius: 4,
-  },
+    boxShadow: "16px 32px 56px rgba(143, 174, 207, 0.25)",
+    [theme.breakpoints.up("sm")]: {
+      padding: 4,
+      gap: 4,
+    },
+  }),
   radioGroup: {
     display: "flex",
     gap: 3,
@@ -16,27 +21,16 @@ export const styles: Record<string, SxProps<Theme>> = {
   radioLabel: (theme) => ({
     fontWeight: theme.typography.fontWeightSemiBold,
   }),
-  resultSection: {
-    backgroundColor: "#345FF6",
-    borderRadius: 2,
-    padding: 3,
-    marginTop: 3,
-  },
-  resultTitle: {
-    color: "#fff",
-    fontFamily: "Inter",
-    fontSize: "24px",
-    fontWeight: 600,
-    lineHeight: "110%",
-    letterSpacing: "-1.2px",
-    marginBottom: 2,
-  },
-  resultDescription: {
-    color: "#fff",
-    fontFamily: "Inter",
-    fontSize: "16px",
-    fontWeight: 400,
-    lineHeight: "150%",
-    opacity: 0.8,
-  },
+  resultSection: (theme) => ({
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: 4,
+    padding: 4,
+    gap: 3,
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      borderTopRightRadius: 999,
+      borderBottomRightRadius: 999,
+    },
+  }),
 };
