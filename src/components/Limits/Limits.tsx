@@ -9,7 +9,7 @@ import { LimitCard } from "./LimitCard/LimitCard";
 
 export const Limits = () => {
   return (
-    <Box sx={styles.container}>
+    <Box component="section" sx={styles.container}>
       <Typography variant="h3" component="h2" sx={styles.title}>
         Limitations of BMI
       </Typography>

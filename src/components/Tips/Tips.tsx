@@ -7,7 +7,7 @@ import { TipCard } from "./TipCard/TipCard";
 
 export const Tips = () => {
   return (
-    <Box sx={styles.container}>
+    <Box component="section" sx={styles.container}>
       <TipCard
         icon={iconEating}
         title="Healthy eating"
