@@ -7,19 +7,23 @@ export const styles: Record<string, SxProps<Theme>> = {
     alignItems: "center",
     gap: 6,
     [theme.breakpoints.up("sm")]: {
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
       paddingInline: 5,
-      flexDirection: "row",
-      justifyContent: "space-between",
       gap: 9,
     },
-    // padding: "0 1rem",
+    [theme.breakpoints.up("md")]: {
+      paddingInline: theme.spacing(18),
+    },
   }),
   image: (theme) => ({
-    width: "100%",
+    maxWidth: "100%",
     borderRadius: 4,
     [theme.breakpoints.up("sm")]: {
-      alignSelf: "flex-end",
-      maxWidth: "50%",
+      alignSelf: "end",
+    },
+    [theme.breakpoints.up("md")]: {
+      alignSelf: "center",
     },
   }),
   resultContainer: (theme) => ({
