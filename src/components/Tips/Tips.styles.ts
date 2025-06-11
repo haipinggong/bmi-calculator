@@ -11,5 +11,10 @@ export const styles: Record<string, SxProps<Theme>> = {
       paddingInline: 5,
       paddingBlock: 6,
     },
+    [theme.breakpoints.up("lg")]: {
+      padding: theme.spacing(12, 16),
+      flexDirection: "row",
+      gap: 4,
+    },
   }),
 };
