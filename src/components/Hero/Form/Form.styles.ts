@@ -14,10 +14,20 @@ export const styles: Record<string, SxProps<Theme>> = {
     },
   }),
   radioGroup: {
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
     gap: 3,
-    justifyContent: "space-between",
   },
+  inputsContainer: (theme) => ({
+    display: "flex",
+    flexDirection: "column",
+    gap: 2,
+    [theme.breakpoints.up("sm")]: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 3,
+    },
+  }),
   radioLabel: (theme) => ({
     fontWeight: theme.typography.fontWeightSemiBold,
   }),

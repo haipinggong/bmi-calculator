@@ -42,8 +42,10 @@ export const Form = () => {
         />
       </RadioGroup>
 
-      <HeightInput unit={unit} />
-      <WeightInput unit={unit} />
+      <Box sx={styles.inputsContainer}>
+        <HeightInput unit={unit} />
+        <WeightInput unit={unit} />
+      </Box>
 
       <Box sx={styles.resultSection}>
         <Typography variant="h4" component="h3" color="common.white">

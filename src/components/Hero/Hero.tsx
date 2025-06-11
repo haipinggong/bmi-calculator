@@ -13,8 +13,10 @@ export const Hero = () => {
         alt="BMI Calculator Logo"
         sx={styles.logo}
       />
-      <Header />
-      <Form />
+      <Box sx={styles.heroContent}>
+        <Header />
+        <Form />
+      </Box>
     </Box>
   );
 };
