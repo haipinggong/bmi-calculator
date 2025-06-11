@@ -25,6 +25,11 @@ export const styles: Record<string, SxProps<Theme>> = {
     [theme.breakpoints.up("sm")]: {
       display: "grid",
       gridTemplateColumns: "repeat(2, 1fr)",
+      "& > *:last-child": {
+        gridColumn: "span 2",
+        maxWidth: "50%",
+        justifySelf: "center",
+      },
     },
   }),
 };
