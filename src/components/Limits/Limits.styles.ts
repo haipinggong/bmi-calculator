@@ -5,6 +5,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     display: "grid",
     gap: 2,
     padding: (theme) => theme.spacing(8, 3),
+    position: "relative",
     [theme.breakpoints.up("sm")]: {
       paddingInline: 5,
       gridTemplateColumns: "repeat(4, 1fr)",
@@ -16,21 +17,6 @@ export const styles: Record<string, SxProps<Theme>> = {
       `,
       "& > *:first-child": {
         gridArea: "title",
-      },
-      "& > *:nth-child(3)": {
-        gridArea: "age",
-      },
-      "& > *:nth-child(4)": {
-        gridArea: "muscle",
-      },
-      "& > *:nth-child(5)": {
-        gridArea: "pregnancy",
-      },
-      "& > *:nth-child(6)": {
-        gridArea: "race",
-      },
-      "& > *:nth-child(2)": {
-        gridArea: "gender",
       },
     },
     [theme.breakpoints.up("lg")]: {

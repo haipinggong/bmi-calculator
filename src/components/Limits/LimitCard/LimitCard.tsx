@@ -5,11 +5,22 @@ type LimitCardProps = {
   icon: string;
   title: string;
   description: string;
+  position: "gender" | "age" | "muscle" | "pregnancy" | "race";
 };
 
-export const LimitCard = ({ icon, title, description }: LimitCardProps) => {
+export const LimitCard = ({
+  icon,
+  title,
+  description,
+  position,
+}: LimitCardProps) => {
   return (
-    <Card variant="outlined" sx={styles.card}>
+    <Card
+      variant="outlined"
+      sx={styles.card}
+      data-position={position}
+      style={{ "--position": position } as React.CSSProperties}
+    >
       <Box sx={styles.iconContainer}>
         <Box
           component="img"
