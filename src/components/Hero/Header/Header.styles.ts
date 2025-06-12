@@ -8,19 +8,20 @@ export const styles: Record<string, SxProps<Theme>> = {
     [theme.breakpoints.up("sm")]: {
       paddingInline: theme.spacing(5),
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       paddingInline: 0,
+      alignSelf: "center",
     },
   }),
   title: (theme) => ({
     textAlign: "center",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       textAlign: "left",
     },
   }),
   description: (theme) => ({
     textAlign: "center",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       textAlign: "left",
     },
   }),

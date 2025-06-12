@@ -12,7 +12,7 @@ export const styles: Record<string, SxProps<Theme>> = {
       paddingInline: 5,
       gap: 9,
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       paddingInline: theme.spacing(18),
     },
   }),
@@ -22,7 +22,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     [theme.breakpoints.up("sm")]: {
       alignSelf: "end",
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       alignSelf: "center",
     },
   }),

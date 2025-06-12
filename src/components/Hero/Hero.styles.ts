@@ -10,7 +10,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     [theme.breakpoints.up("sm")]: {
       paddingInline: theme.spacing(5),
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       paddingInline: theme.spacing(18),
       paddingBlock: theme.spacing(11),
       gap: 3,
@@ -25,7 +25,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     display: "flex",
     flexDirection: "column",
     gap: 4,
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
       gap: 4,
