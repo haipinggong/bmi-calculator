@@ -1,35 +1,61 @@
 import type { SxProps, Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 7,
+  container: (theme) => ({
+    display: "grid",
+    gap: 2,
     padding: (theme) => theme.spacing(8, 3),
-  },
-  titleContainer: {
+    [theme.breakpoints.up("sm")]: {
+      paddingInline: 5,
+      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateAreas: `
+        "title title title title"
+        "gender gender age age"
+        "muscle muscle pregnancy pregnancy"
+        ". race race ."
+      `,
+      "& > *:first-child": {
+        gridArea: "title",
+      },
+      "& > *:nth-child(3)": {
+        gridArea: "age",
+      },
+      "& > *:nth-child(4)": {
+        gridArea: "muscle",
+      },
+      "& > *:nth-child(5)": {
+        gridArea: "pregnancy",
+      },
+      "& > *:nth-child(6)": {
+        gridArea: "race",
+      },
+      "& > *:nth-child(2)": {
+        gridArea: "gender",
+      },
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingInline: 18,
+      gridTemplateColumns: "repeat(6, 1fr)",
+      gridTemplateAreas: `
+        "title title title . gender gender"
+        ". . age age muscle muscle"
+        ". pregnancy pregnancy race race ."
+      `,
+    },
+  }),
+  titleContainer: (theme) => ({
     display: "flex",
     flexDirection: "column",
-    gap: 4,
-  },
+    gap: 2,
+    marginBottom: 5,
+    [theme.breakpoints.up("sm")]: {
+      gridColumn: "span 4",
+    },
+  }),
   title: {
     textAlign: "center",
   },
   description: {
     textAlign: "center",
   },
-  limitsContainer: (theme) => ({
-    display: "flex",
-    flexDirection: "column",
-    gap: 2,
-    [theme.breakpoints.up("sm")]: {
-      display: "grid",
-      gridTemplateColumns: "repeat(2, 1fr)",
-      "& > *:last-child": {
-        gridColumn: "span 2",
-        maxWidth: "50%",
-        justifySelf: "center",
-      },
-    },
-  }),
 };
