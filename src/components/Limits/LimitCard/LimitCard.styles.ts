@@ -9,7 +9,6 @@ export const styles: Record<string, SxProps<Theme>> = {
     backgroundColor: (theme) => theme.palette.background.paper,
     borderRadius: 4,
     boxShadow: "16px 32px 56px rgba(143, 174, 207, 0.25)",
-    gridArea: "var(--position)",
   },
   iconContainer: {
     display: "flex",

@@ -15,8 +15,23 @@ export const styles: Record<string, SxProps<Theme>> = {
         "muscle muscle pregnancy pregnancy"
         ". race race ."
       `,
-      "& > *:first-child": {
+      "& > [data-position='title']": {
         gridArea: "title",
+      },
+      "& > [data-position='gender']": {
+        gridArea: "gender",
+      },
+      "& > [data-position='age']": {
+        gridArea: "age",
+      },
+      "& > [data-position='muscle']": {
+        gridArea: "muscle",
+      },
+      "& > [data-position='pregnancy']": {
+        gridArea: "pregnancy",
+      },
+      "& > [data-position='race']": {
+        gridArea: "race",
       },
     },
     [theme.breakpoints.up("lg")]: {
@@ -24,9 +39,13 @@ export const styles: Record<string, SxProps<Theme>> = {
       gridTemplateColumns: "repeat(6, 1fr)",
       gridTemplateAreas: `
         "title title title . gender gender"
-        ". . age age muscle muscle"
+        "curvedLine curvedLine age age muscle muscle"
         ". pregnancy pregnancy race race ."
       `,
+      "& > [data-position='curvedLine']": {
+        gridArea: "curvedLine",
+        justifySelf: "center",
+      },
     },
   }),
   titleContainer: (theme) => ({

@@ -38,7 +38,7 @@ export const Limits = () => {
           component="img"
           src={patternCurvedLineRight}
           alt=""
-          sx={styles.curvedLine}
+          data-position="curvedLine"
         />
       )}
 

@@ -15,12 +15,7 @@ export const LimitCard = ({
   position,
 }: LimitCardProps) => {
   return (
-    <Card
-      variant="outlined"
-      sx={styles.card}
-      data-position={position}
-      style={{ "--position": position } as React.CSSProperties}
-    >
+    <Card variant="outlined" sx={styles.card} data-position={position}>
       <Box sx={styles.iconContainer}>
         <Box
           component="img"
