@@ -56,6 +56,9 @@ export const styles: Record<string, SxProps<Theme>> = {
     [theme.breakpoints.up("sm")]: {
       gridColumn: "span 4",
     },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "30vw",
+    },
   }),
   title: {
     textAlign: "center",
