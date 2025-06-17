@@ -6,9 +6,9 @@ export const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     gap: 1,
   },
-  label: {
-    fontWeight: 600,
-  },
+  label: (theme) => ({
+    color: theme.palette.text.secondary,
+  }),
   input: {
     "& input": {
       borderRadius: 3,
