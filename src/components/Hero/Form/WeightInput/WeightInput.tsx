@@ -1,4 +1,4 @@
-import { Box, TextField, Typography } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import { styles } from "./WeightInput.styles";
 
 type WeightInputProps = {
@@ -8,20 +8,32 @@ type WeightInputProps = {
 export const WeightInput = ({ unit }: WeightInputProps) => {
   return (
     <Box sx={styles.inputGroup}>
-      <Typography component="label" sx={styles.label}>
-        Weight
-      </Typography>
-      <TextField
-        fullWidth
-        placeholder="0"
-        type="number"
-        InputProps={{
-          endAdornment: (
-            <Typography>{unit === "metric" ? "kg" : "st"}</Typography>
-          ),
-        }}
-        sx={styles.input}
-      />
+      {unit === "metric" ? (
+        <TextField
+          id="weight-metric"
+          label="Weight: kg"
+          placeholder="0"
+          type="number"
+          sx={styles.input}
+        />
+      ) : (
+        <>
+          <TextField
+            id="weight-imperial-st"
+            label="Weight: st"
+            placeholder="0"
+            type="number"
+            sx={styles.input}
+          />
+          <TextField
+            id="weight-imperial-lbs"
+            label="Weight: lbs"
+            placeholder="0"
+            type="number"
+            sx={styles.input}
+          />
+        </>
+      )}
     </Box>
   );
 };

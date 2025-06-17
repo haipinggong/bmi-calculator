@@ -10,13 +10,8 @@ export const styles: Record<string, SxProps<Theme>> = {
     color: theme.palette.text.secondary,
   }),
   input: {
-    width: "100%",
-    padding: 2,
-    borderRadius: 1,
-    border: "1px solid #E8E8E8",
-    "&:focus": {
-      outline: "none",
-      borderColor: "#345FF6",
+    "& input": {
+      borderRadius: 3,
     },
   },
 };
