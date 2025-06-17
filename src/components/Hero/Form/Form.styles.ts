@@ -31,7 +31,26 @@ export const styles: Record<string, SxProps<Theme>> = {
   radioLabel: (theme) => ({
     fontWeight: theme.typography.fontWeightSemiBold,
   }),
-  resultSection: (theme) => ({
+  resultContainer: (theme) => ({
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: 4,
+    padding: 4,
+    gap: 3,
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      borderTopRightRadius: 999,
+      borderBottomRightRadius: 999,
+    },
+  }),
+  result: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 1,
+  },
+  emptyContainer: (theme) => ({
     backgroundColor: theme.palette.primary.main,
     borderRadius: 4,
     padding: 4,
@@ -42,5 +61,8 @@ export const styles: Record<string, SxProps<Theme>> = {
       borderTopRightRadius: 999,
       borderBottomRightRadius: 999,
     },
+  }),
+  idealRange: (theme) => ({
+    fontWeight: theme.typography.fontWeightBold,
   }),
 };

@@ -62,6 +62,45 @@ export const Form = () => {
     }
   }
 
+  // BMI category function
+  function getBmiCategory(bmi: number) {
+    if (bmi < 18.5) return "underweight";
+    if (bmi < 25) return "a healthy weight";
+    if (bmi < 30) return "overweight";
+    return "obese";
+  }
+
+  // Ideal weight range function
+  function getIdealWeightRange() {
+    if (unit === "metric") {
+      const h = parseFloat(height.cm);
+      if (!h) return "";
+      const meters = h / 100;
+      const min = 18.5 * meters * meters;
+      const max = 24.9 * meters * meters;
+      return `${min.toFixed(1)}kg - ${max.toFixed(1)}kg`;
+    } else {
+      const ft = parseFloat(height.ft);
+      const inch = parseFloat(height.in);
+      const totalInches = (ft ? ft : 0) * 12 + (inch ? inch : 0);
+      if (!totalInches) return "";
+      const minLbs = (18.5 * totalInches * totalInches) / 703;
+      const maxLbs = (24.9 * totalInches * totalInches) / 703;
+      // Convert lbs to st/lbs
+      function toStLbs(lbs: number) {
+        const st = Math.floor(lbs / 14);
+        const remLbs = Math.round(lbs - st * 14);
+        return `${st}st ${remLbs}lbs`;
+      }
+      return `${toStLbs(minLbs)} - ${toStLbs(maxLbs)}`;
+    }
+  }
+
+  const bmiValue = calculateBmi();
+  const bmiNum = parseFloat(bmiValue);
+  const category = bmiValue ? getBmiCategory(bmiNum) : "";
+  const idealRange = getIdealWeightRange();
+
   return (
     <Box component="form" sx={styles.formContainer}>
       <Typography variant="h4" component="h2">
@@ -90,16 +129,39 @@ export const Form = () => {
         <WeightInput unit={unit} value={weight} onChange={setWeight} />
       </Box>
 
-      <Box sx={styles.resultSection}>
-        <Typography variant="h4" component="h3" color="common.white">
-          {calculateBmi() ? `Your BMI: ${calculateBmi()}` : "Welcome!"}
-        </Typography>
-        <Typography variant="body2" color="common.white">
-          {calculateBmi()
-            ? "This is your calculated Body Mass Index."
-            : `Enter your height and weight and you'll see your BMI result here`}
-        </Typography>
-      </Box>
+      {bmiValue ? (
+        <Box sx={styles.resultContainer}>
+          <Box sx={styles.result}>
+            <Typography variant="body1" component="h3" color="common.white">
+              Your BMI is...
+            </Typography>
+            <Typography variant="h4" component="h3" color="common.white">
+              {bmiValue}
+            </Typography>
+          </Box>
+
+          <Typography variant="body2" color="common.white">
+            {`Your BMI suggests you're ${category}. Your ideal weight is between `}
+            <Typography
+              variant="body2"
+              color="common.white"
+              component="span"
+              sx={styles.idealRange}
+            >
+              {idealRange}
+            </Typography>
+          </Typography>
+        </Box>
+      ) : (
+        <Box sx={styles.emptyContainer}>
+          <Typography variant="h4" component="h3" color="common.white">
+            Welcome!
+          </Typography>
+          <Typography variant="body2" color="common.white">
+            Enter your height and weight and you'll see your BMI result here
+          </Typography>
+        </Box>
+      )}
     </Box>
   );
 };
