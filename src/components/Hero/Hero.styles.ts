@@ -7,6 +7,22 @@ export const styles: Record<string, SxProps<Theme>> = {
     alignItems: "center",
     gap: 4,
     padding: theme.spacing(4, 3, 0, 3),
+    position: "relative",
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      height: "100%",
+      background: "linear-gradient(to right, #D6FCFE, #D6E6FE)",
+      borderBottomLeftRadius: 35,
+      borderBottomRightRadius: 35,
+      zIndex: -1,
+      [theme.breakpoints.up("lg")]: {
+        right: "30%",
+      },
+    },
     [theme.breakpoints.up("sm")]: {
       paddingInline: theme.spacing(5),
     },
