@@ -46,6 +46,10 @@ export const styles: Record<string, SxProps<Theme>> = {
         gridArea: "curvedLine",
         justifySelf: "center",
       },
+      "& > [data-position='gender']": {
+        position: "relative",
+        right: "30%",
+      },
     },
   }),
   titleContainer: (theme) => ({
